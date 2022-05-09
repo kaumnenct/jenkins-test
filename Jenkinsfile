@@ -13,6 +13,7 @@ pipeline {
           stage('deploy') { 
               steps {
                 echo 'deploying the app...'
+                  sh 'node app/server.js'
               }
           }
     }
