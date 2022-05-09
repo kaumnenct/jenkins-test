@@ -6,8 +6,7 @@ pipeline {
             steps {
               echo 'building the app...'
                 nodejs('NodeJS Jenkins') {
-                    sh 'cd app'
-                    sh 'npm install'
+                    sh 'npm install ./app'
                 }
             }
         }
