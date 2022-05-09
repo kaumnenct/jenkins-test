@@ -5,6 +5,9 @@ pipeline {
         stage('Build') { 
             steps {
               echo 'building the app...'
+                nodejs('NodeJS Jenkins') {
+                    sh 'npm install'
+                }
             }
         }
           stage('test') { 
