@@ -13,7 +13,9 @@ pipeline {
           stage('deploy') { 
               steps {
                 echo 'deploying the app...'
-                  sh 'node ./app/server.js'
+                  nodejs('NodeJS Jenkins') {
+                    sh 'node ./app/server.js'
+                  }
               }
           }
     }
