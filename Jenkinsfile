@@ -6,15 +6,11 @@ pipeline {
             steps {
               echo 'building the app...'
                 nodejs('NodeJS Jenkins') {
+                    sh 'cd app'
                     sh 'npm install'
                 }
             }
         }
-          stage('test') { 
-              steps {
-                echo 'testing the app...'
-              }
-          }
           stage('deploy') { 
               steps {
                 echo 'deploying the app...'
