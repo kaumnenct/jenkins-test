@@ -14,7 +14,8 @@ pipeline {
               steps {
                 echo 'deploying the app...'
                   nodejs('NodeJS Jenkins') {
-                    sh 'node ./app/server.js'
+                    sh 'npm run build'
+                    sh 'npm start'
                   }
               }
           }
